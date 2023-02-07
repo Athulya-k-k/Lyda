@@ -537,3 +537,5 @@ def admin_order(request):
   
   else:
     return redirect('home')
+
+    # return to home
