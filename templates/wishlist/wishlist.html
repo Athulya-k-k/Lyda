@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Wishlist {% endblock title %}
+{% block content %}
+
+	<!-- Shoping Cart -->
+	<div class="bg0 p-t-75 p-b-85">
+		<div class="container">
+			
+			{% if not wishlist_items %}
+			
+				<br>
+				<h2 class="text-center fw-bold">Your Wishlist is Empty</h2>
+				<br>
+				<div class="text-center">
+					<a href="{% url 'store' %}" class="btn btn-primary mt-3">Continue Shopping</a>
+				</div>
+                <br>
+				{% else %}
+				<br>
+								<div class="row">
+									{% for wishlist_item in wishlist_items %}
+
+											<div class="col-md-4">
+												<figure class="card card-product-grid">
+													<div class="img-wrap"> 
+														
+														<img src="{{ wishlist_item.product.images.url }}" alt="IMG">
+													
+														
+													</div> <!-- img-wrap.// -->
+													<figcaption class="info-wrap">
+														<div class="fix-height">
+															<a href="{{ wishlist_item.product.get_url }}" class='title'>{{ wishlist_item.product.product_name }}</a><br>
+															<div class="price-wrap mt-2">
+																<span class="price">₹{{ wishlist_item.product.price }}</span>
+															
+															</div> <!-- price-wrap.// -->
+														</div>
+														<a href="{% url 'remove_wishlist_item' wishlist_item.product.id wishlist_item.id %}" onclick="return confirm('Are you sure you want to remove item')" class="btn btn-danger me-5">Remove</a>													</figcaption>
+												</figure>
+											</div> <!-- col.// -->
+									{% endfor %}		
+								</div> <!-- row end.// -->
+								
+							</table>
+						</div>
+						<br>
+ 
+						<div class="flex-w flex-sb-m bor15 p-t-18 p-b-15 p-lr-40 p-lr-15-sm">  
+							
+						</div>
+					</div>
+				</div>
+				{% endif %}
+
+			</div>
+			
+		</div>
+	</div>
+		
+	{% endblock content %}
+
+
+
+	
