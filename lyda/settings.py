@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-fkfk5$8a*0#kd-(857kv@j_b_y5)$sk7#=hz&)=)b63ik%*$3j
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -159,7 +159,7 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_HOST_USER = 'athulyaathu.uk@gmail.com'
-EMAIL_HOST_PASSWORD = 'lzyhzernlhrhqthb'
+EMAIL_HOST_PASSWORD = 'ffmyifefukeblocy'
 EMAIL_USE_TLS = True
 
 RAZORPAY_KEY_ID = 'rzp_test_Lny9ufvQpupgij'
