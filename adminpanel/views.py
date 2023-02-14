@@ -99,7 +99,7 @@ def manage_product(request):
             'products' : paged_products 
         }
 
-        return render(request, 'manager/product_management.html', context)
+        return render(request, 'templates/manager/product_management.html', context)
 
     else:
         return redirect('home')
