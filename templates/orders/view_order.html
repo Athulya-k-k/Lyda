@@ -69,6 +69,7 @@
                         <th class="per70 text-center">Description</th>
                         <th class="per5 text-center">Qty</th>
                         <th class="per25 text-center">Total</th>
+                        
                       </tr>
                     </thead>
                     <tbody>
@@ -77,6 +78,7 @@
                         <td>{{ ordered_product.product.name }}</td>
                         <td class="text-center">{{ ordered_product.quantity }}</td>
                         <td class="text-center">₹ {{ ordered_product.product_price }}</td>
+                       
                       </tr>
                       {% endfor %}
                     </tbody>
