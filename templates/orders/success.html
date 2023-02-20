@@ -74,6 +74,8 @@
                       <tr>
                         <th class="per70 text-center">Product Name</th>
                         <th class="per5 text-center">Qty</th>
+                        {% comment %} <th class="per5 text-center">color</th> {% endcomment %}
+                        
                         <th class="per25 text-center">Total</th>
                       </tr>
                     </thead>
@@ -82,7 +84,9 @@
                       <tr>
                         <td>{{ ordered_product.product.product_name }}</td>
                         <td class="text-center">{{ ordered_product.quantity }}</td>
+                        {% comment %} <td class="text-center">{{ ordered_product.product_color }}</td> {% endcomment %}
                         <td class="text-center">₹ {{ ordered_product.product_price }}</td>
+                        
                       </tr>
                       {% endfor %}
                     </tbody>
