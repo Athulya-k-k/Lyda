@@ -80,12 +80,14 @@
                       </tr>
                     </thead>
                     <tbody>
-                      {% for ordered_product in ordered_detail %}
+                      {% for ordered_product in ordered_products %}
                       <tr>
-                        <td>{{ ordered_product.product.product_name }}</td>
+                        <td>{{ ordered_product.product.product_name }}
+                          
+                        </td>
                         <td class="text-center">{{ ordered_product.quantity }}</td>
-                        {% comment %} <td class="text-center">{{ ordered_product.product_color }}</td> {% endcomment %}
-                        <td class="text-center">₹ {{ ordered_product.product_price }}</td>
+                        
+                        <td class="text-center">₹ {{ ordered_product.product.price }}</td>
                         
                       </tr>
                       {% endfor %}
